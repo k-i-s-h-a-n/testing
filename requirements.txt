@@ -17,6 +17,7 @@ exceptiongroup==1.1.1
 execnet==1.9.0
 fonttools==4.39.3
 glob2==0.7
+
 html5lib==1.1
 idna==3.4
 img2pdf==0.4.4
@@ -56,6 +57,7 @@ reportlab==3.6.12
 requests==2.28.2
 six==1.16.0
 sqlparse==0.4.3
+
 svglib==1.5.1
 termcolor==2.3.0
 tinycss2==1.2.1
@@ -65,6 +67,7 @@ tzdata==2023.3
 tzlocal==4.3
 uritools==4.0.1
 urllib3==1.26.15
+
 weasyprint==58.1
 webencodings==0.5.1
 xhtml2pdf==0.2.9
