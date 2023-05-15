@@ -15,5 +15,3 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ExamSystem.settings')
 
 application = get_wsgi_application()
 
-
-app=application
