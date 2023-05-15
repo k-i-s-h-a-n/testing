@@ -1,0 +1,109 @@
+{% extends 'base.html' %} {% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exam Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 150px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 120px rgba(0, 10201, 0, 0.4);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s;
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      button[type="submit"] {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .container {
+          max-width: 100%;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <center><b></h6>ENTER DETAILS</h6><b></center>
+      <form action="{% url 'search' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="exam_center">Exam Center:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exam_center"
+            name="exam_center"
+          />
+          <label for="classes">Class:</label>
+          <input type="text" class="form-control" id="classes" name="classes" />
+          <label for="subject">Subject:</label>
+          <input type="text" class="form-control" id="subject" name="subject" />
+        </div>
+        <button type="submit" class="btn btn-primary">Proceed</button>
+      </form>
+    </div>
+  </body>
+</html>
+{% endblock %} {% comment %}
+<div class="container">
+  <h1>OMR GENERATION</h1>
+  <form action="omr_gen_dow/">
+    {%csrf_token%}
+    <label for="exam-center">Exam Center:</label>
+    <input type="text" name="student_id" required />
+    <input type="submit" value="Download" />
+  </form>
+</div>
+{% endcomment %}

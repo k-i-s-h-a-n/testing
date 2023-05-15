@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input type="file" id="folderInput" webkitdirectory directory multiple />
+    <ul id="fileList"></ul>
+    <script>
+      const folderInput = document.getElementById("folderInput");
+      const fileList = document.getElementById("fileList");
+
+      folderInput.addEventListener("change", (event) => {
+        // Get all files from the selected folder
+        const files = event.target.files;
+
+        // Loop through all files and add them to the list
+        for (let i = 0; i < files.length; i++) {
+          const file = files[i];
+          const li = document.createElement("li");
+          li.textContent = file.name;
+          fileList.appendChild(li);
+        }
+      });
+    </script>
+  </body>
+</html>

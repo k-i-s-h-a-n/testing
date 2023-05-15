@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Teacher Homepage</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static\css\style.css" />
+    <style></style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <img src="static\img\teachers_portal_img.jpg" alt="Logo" />
+          <h2>Teacher Portal</h2>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#">Generate Question Paper</a></li>
+          <li><a href="#">Generate OMR</a></li>
+          <li><a href="#">Upload OMR</a></li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+        <div class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-container">
+        <h1>Welcome, Teacher!</h1>
+        {%if messages %} {%for message in messages%}
+        <small {%if message.tags%} class="{{message.tags}}" {%endif%}
+          >{{message}}</small
+        >
+        {%endfor%} {%endif%}
+        <p>Use the buttons below to generate or upload exam materials.</p>
+        <div class="hero-buttons">
+          <a href="/static/questions/question paper.pdf" download class="btn"
+            >Generate Question Paper</a
+          >
+          <a href="/omr" class="btn">Generate OMR</a>
+          <a href="/upload-image" class="btn">Scan OMR</a>
+        </div>
+      </div>
+    </section>
+
+    {% comment %} <script src="script.js"></script> {% endcomment %}
+  </body>
+</html>

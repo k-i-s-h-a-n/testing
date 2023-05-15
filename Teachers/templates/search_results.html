@@ -1,0 +1,84 @@
+{% extends 'base.html' %} {% block content %}
+<!-- example.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data</title>
+    <style>
+      /* Style for the table */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        color: #203;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #1271;
+      }
+
+      /* Style for the page header */
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 36px;
+        color: #333;
+      }
+      button[type="submit"] {
+        background-color: #3e8e41;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DETAILS</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>CENTER CODE</th>
+          <th>Exam Name</th>
+          <th>Exam ID</th>
+          <th>Subject</th>
+          <th>Name</th>
+          <th>Roll no</th>
+          <th>Class</th>
+          <th>Section</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in data %}
+        <tr>
+          <td>{{ item.center_code}}</td>
+          <td>{{ item.Exam_name }}</td>
+          <td>{{ item.Exam_id }}</td>
+          <td>{{ item.subject }}</td>
+          <td>{{ item.Name }}</td>
+          <td>{{ item.Roll_no }}</td>
+          <td>{{ item.classes }}</td>
+          <td>{{ item.section }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <center>
+      {% comment %}
+      <a href="{{ url }}" class="btn btn-primary">Download filtered results</a>
+      {% endcomment %}
+      <a href="{{ url }}"
+        ><button type="submit" class="btn btn-primary">Download OMR</button></a
+      >
+      <a href="/add_data"
+        ><button type="submit" class="btn btn-primary">Add Student</button></a
+      >
+    </center>
+  </body>
+</html>
+{% endblock %}

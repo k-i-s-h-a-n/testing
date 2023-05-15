@@ -1,0 +1,93 @@
+{% comment %} old Homepage {% endcomment %} {% comment %}
+
+<h1>After Login Page</h1>
+{% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Exam Management System</title>
+    <style>
+      .btn {
+        background-color: #4caf50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 12px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px #888888;
+      }
+
+      .center {
+        padding: 100px 0;
+        text-align: center;
+        border: 3px solid green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="center">
+      <h1>Teacher's Panel</h1>
+      <a href="/static/questions/question paper.pdf" download>
+        <button class="btn btn-primary btn-lg">GENERATE QUESTIONS PAPER</button>
+      </a>
+      <br />
+      <a href="/omr">
+        <button class="btn btn-primary btn-lg">GENERATE OMR</button>
+      </a>
+      {% comment %}
+      <a href="/static/img/omr.jpg" download>
+        <button class="btn btn-primary btn-lg">DOWNLOAD OMR</button>
+      </a>
+      {% endcomment %}
+      <br />
+      <a href="/upload-image">
+        <button class="btn btn-primary btn-lg">UPLOAD OMR</button>
+      </a>
+      <br />
+      <a href="/login">
+        <button class="btn btn-primary btn-lg">LOGOUT</button>
+      </a>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>No Data Found</title>
+    <style>
+      /* Style the body */
+      body {
+        background-color: #f1f1f1;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Style the container */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      /* Style the heading */
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      /* Style the message */
+      p {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #666;
+      }
+
+      /* Style the button */
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>No Data Found</h1>
+      <p>We're sorry, but we couldn't find any data for your search.</p>
+      <button onclick="goBack()">Go Back</button>
+      <a href="/add_data">
+        <button>Add Data</button>
+      </a>
+    </div>
+
+    <script>
+      // JavaScript function to go back to the previous page
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>
